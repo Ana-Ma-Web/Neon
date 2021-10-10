@@ -30,24 +30,30 @@ body{
    // background-image: url(../img/pattern.jpg), url(../img/pattern.jpg);
    // background-blend-mode: multiply;
    // background-size: 200px 200px;
-   // font-family: var(--text-ff);
+   font-family: var(--text-ff);
 }
 .wrapper{
-   background-image: url(../img/pattern.jpg), url(../img/pattern.jpg);
+   background-image: url(../img/pattern.jpg), url(../img/pattern1.jpg);
    background-blend-mode: multiply;
    background-size: 200px 200px;
-   font-family: var(--text-ff);
+   // font-family: var(--text-ff);
 
 
    height: 100%;
    width: 100%;
    // background-color: var(--wrapper-background-color);
-
+   &__cover{
+      // background-image: url(../img/pattern.jpg), url(../img/pattern1.jpg);
+      // background-blend-mode: multiply;
+      // background-size: 200px 200px;
+   
+      height: 100%;
+      width: 100%;
+      background-color: var(--wrapper-background-color);
+   
+   }
 }
 .container{
-   height: 100%;
-   width: 100%;
-   background-color: var(--wrapper-background-color);
 
    max-width: 1280px;
    margin: 0 auto;

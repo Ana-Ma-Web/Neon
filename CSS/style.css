@@ -95,20 +95,26 @@ h1, h2, h3, h4, h5, h6 {
   --text-size-title: 2rem;
 }
 
+body {
+  font-family: var(--text-ff);
+}
+
 .wrapper {
-  background-image: url(../img/pattern.jpg), url(../img/pattern.jpg);
+  background-image: url(../img/pattern.jpg), url(../img/pattern1.jpg);
   background-blend-mode: multiply;
   -webkit-background-size: 200px 200px;
           background-size: 200px 200px;
-  font-family: var(--text-ff);
   height: 100%;
   width: 100%;
 }
 
-.container {
+.wrapper__cover {
   height: 100%;
   width: 100%;
   background-color: var(--wrapper-background-color);
+}
+
+.container {
   max-width: 1280px;
   margin: 0 auto;
 }
