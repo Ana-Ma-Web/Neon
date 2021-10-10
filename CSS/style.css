@@ -100,7 +100,7 @@ body {
 }
 
 .wrapper {
-  background-image: url(../img/pattern.jpg), url(../img/pattern1.jpg);
+  background-image: url(../img/Pattern.jpg), url(img/Pattern1.jpg);
   background-blend-mode: multiply;
   -webkit-background-size: 200px 200px;
           background-size: 200px 200px;
