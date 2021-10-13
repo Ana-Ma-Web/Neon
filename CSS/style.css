@@ -81,9 +81,12 @@ h1, h2, h3, h4, h5, h6 {
   --first-color-light: hsla(var(--hue-color), 53%, 89%, .2);
   --wrapper-background-color: hsla(223, 100%, 1%, 0.97);
   --block-background-color: hsl(var(--hue-color), 93%, 3%);
+  --abstraction-color-line: hsla(189, 96%, 58%, 1);
   --abstraction-color-circle-1: hsla(49, 96%, 68%, 1);
   --abstraction-color-circle-2: hsla(149, 96%, 68%, 1);
   --abstraction-color-circle-3: hsla(249, 96%, 78%, 1);
+  --abstraction-color-rect-1: hsla(298.9, 100%, 78%, 1);
+  --abstraction-color-rect-2: hsla(98.9, 90%, 68%, 1);
   --neon-box-shadow: 0px 0px 103px var(--first-color-light),
    0px 0px 28px var(--first-color),
    inset 0px 0px 28px var(--first-color),
@@ -271,8 +274,6 @@ body {
   font-family: var(--text-ff-title);
   color: var(--first-color);
   text-shadow: 0px 0px 6px var(--first-color);
-  -webkit-filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
-          filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
   font-weight: bold;
 }
 
@@ -317,6 +318,42 @@ body {
           filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
 }
 
+.line_1 {
+  -webkit-transform: translate(116px, -50px);
+      -ms-transform: translate(116px, -50px);
+          transform: translate(116px, -50px);
+  fill: var(--abstraction-color-line);
+}
+
+.line_1 .abstraction__path {
+  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
+          filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
+}
+
+.line_2 {
+  -webkit-transform: translate(136px, -70px);
+      -ms-transform: translate(136px, -70px);
+          transform: translate(136px, -70px);
+  fill: var(--abstraction-color-line);
+}
+
+.line_2 .abstraction__path {
+  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
+          filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
+}
+
+.line_3 {
+  -webkit-transform: translate(156px, -50px);
+      -ms-transform: translate(156px, -50px);
+          transform: translate(156px, -50px);
+  fill: var(--abstraction-color-line);
+}
+
+.line_3 .abstraction__path {
+  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
+          filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
+}
+
 .circle_1 {
   stroke: var(--abstraction-color-circle-1);
 }
@@ -348,4 +385,28 @@ body {
 .circle_3 .abstraction__path {
   -webkit-filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-3));
           filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-3));
+}
+
+.rect_1 {
+  -webkit-transform: translate(-26px, 25px) rotate(0.1turn) scale(0.3);
+      -ms-transform: translate(-26px, 25px) rotate(0.1turn) scale(0.3);
+          transform: translate(-26px, 25px) rotate(0.1turn) scale(0.3);
+  stroke: var(--abstraction-color-rect-1);
+}
+
+.rect_1 .abstraction__path {
+  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-rect-1));
+          filter: drop-shadow(0px 0px 3px var(--abstraction-color-rect-1));
+}
+
+.rect_2 {
+  -webkit-transform: translate(26px, -55px) rotate(0.3turn) scale(0.2);
+      -ms-transform: translate(26px, -55px) rotate(0.3turn) scale(0.2);
+          transform: translate(26px, -55px) rotate(0.3turn) scale(0.2);
+  stroke: var(--abstraction-color-rect-2);
+}
+
+.rect_2 .abstraction__path {
+  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-rect-2));
+          filter: drop-shadow(0px 0px 3px var(--abstraction-color-rect-2));
 }
