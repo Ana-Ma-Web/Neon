@@ -263,7 +263,17 @@ body {
 .home__button {
   position: fixed;
   bottom: 13%;
-  left: 3rem;
+  left: 7%;
+}
+
+.home__button_text {
+  font-size: var(--text-size-title);
+  font-family: var(--text-ff-title);
+  color: var(--first-color);
+  text-shadow: 0px 0px 6px var(--first-color);
+  -webkit-filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+          filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+  font-weight: bold;
 }
 
 .background-abstraction {
@@ -296,10 +306,9 @@ body {
   color: var(--first-color);
   font-family: var(--text-ff-title);
   font-size: 58px;
-  font-weight: bold;
   position: absolute;
-  top: 39%;
-  left: 11%;
+  top: 33%;
+  left: 5%;
   -webkit-transform: rotate(0.9turn);
       -ms-transform: rotate(0.9turn);
           transform: rotate(0.9turn);
@@ -325,18 +334,18 @@ body {
 }
 
 .circle_2 .abstraction__path {
-  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-2));
-          filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-2));
+  -webkit-filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-2));
+          filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-2));
 }
 
 .circle_3 {
-  -webkit-transform: translate(-46px, 230px) scale(0.2);
-      -ms-transform: translate(-46px, 230px) scale(0.2);
-          transform: translate(-46px, 230px) scale(0.2);
+  -webkit-transform: translate(-46px, 155px) scale(0.2);
+      -ms-transform: translate(-46px, 155px) scale(0.2);
+          transform: translate(-46px, 155px) scale(0.2);
   stroke: var(--abstraction-color-circle-3);
 }
 
 .circle_3 .abstraction__path {
-  -webkit-filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-3));
-          filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-3));
+  -webkit-filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-3));
+          filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-3));
 }

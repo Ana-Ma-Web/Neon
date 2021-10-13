@@ -154,7 +154,15 @@ body{
    &__button{
       position: fixed;
       bottom: 13%;
-      left: 3rem;
+      left: 7%;
+      &_text{
+         font-size: var(--text-size-title);
+         font-family: var(--text-ff-title);
+         color: var(--first-color);
+         text-shadow: 0px 0px 6px var(--first-color);
+         filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+         font-weight: bold;
+      }
    }
 }
 .background-abstraction{
@@ -181,13 +189,13 @@ body{
       color: var(--first-color);
       font-family: var(--text-ff-title);
       font-size: 58px;
-      font-weight: bold;
       position: absolute;
-      top: 39%;
-      left: 11%;
+      top: 33%;
+      left: 5%;
       transform: rotate(0.9turn);
       text-shadow: 0px 0px 3px var(--first-color)  ;
       filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+   
    }
 }
 .circle {
@@ -201,14 +209,14 @@ body{
       transform: translate(156px, 180px) scale(0.3);
       stroke: var(--abstraction-color-circle-2);
       & .abstraction__path{
-         filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-2));
+         filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-2));
       }
    }
    &_3{
-      transform:  translate(-46px, 230px) scale(0.2);
+      transform:  translate(-46px, 155px) scale(0.2);
       stroke: var(--abstraction-color-circle-3);
       & .abstraction__path{
-         filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-3));
+         filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-3));
       }
    }
 }
