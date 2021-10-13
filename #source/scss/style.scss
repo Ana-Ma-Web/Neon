@@ -12,7 +12,11 @@
    --first-color-light: hsla(var(--hue-color), 53%, 89%, .2);
    --wrapper-background-color: hsla(223, 100%, 1%, 0.97);
    --block-background-color: hsl(var(--hue-color), 93%, 3%);
-   --header-height: 100%;
+
+   --abstraction-color-circle-1: hsla(49, 96%, 68%, 1);
+   --abstraction-color-circle-2: hsla(149, 96%, 68%, 1);
+   --abstraction-color-circle-3: hsla(249, 96%, 78%, 1);
+
    --neon-box-shadow: 0px 0px 103px var(--first-color-light),
    0px 0px 28px var(--first-color),
    inset 0px 0px 28px var(--first-color),
@@ -21,10 +25,15 @@
    0px 0px 18px var(--first-color),
    inset 0px 0px 18px var(--first-color),
    inset 0px 0px 53px var(--first-color-light);
+
+   --header-height: 100%;
    --border-radius: 8px;
+
    --text-ff-title: 'Offside', cursive;
    --text-ff: 'Open Sans', sans-serif;
    --text-size-title: 2rem;
+
+   --z-tooltip: 10;
 }
 body{
    font-family: var(--text-ff);
@@ -34,6 +43,8 @@ body{
    background-color: transparent;
    -webkit-tap-highlight-color: transparent;
    font-size: 0;
+   z-index: var(--z-tooltip);
+   filter: drop-shadow(0px 0px 23px hsla(1, 0, 100%, .7));
 
 }
 .wrapper{
@@ -73,7 +84,7 @@ body{
       position: fixed;
       right: 2rem;
       transform: translate(600px);
-      transition: .1s;
+      transition: .2s;
       transition-delay: .1s;
    }
    &__list {
@@ -126,7 +137,7 @@ body{
    opacity: 1;
 }
 .img-svg{
-   filter: drop-shadow(0px 0px 3px var(--first-color));
+   filter: drop-shadow(0px 0px 5px var(--first-color));
    margin: auto;
 }
 .section{
@@ -139,9 +150,65 @@ body{
 // ===== HOME =====
 
 .home{
+   
    &__button{
       position: fixed;
-      bottom: 20%;
+      bottom: 13%;
       left: 3rem;
+   }
+}
+.background-abstraction{
+   transition-duration: .1s;
+   transition-delay: .1s;
+}
+
+.abstraction {
+   width: 300px;
+   height: 300px;
+   margin: auto;
+   left: calc(50% - 144px);
+   top: calc(50% - 144px);
+   position: absolute;
+
+   &__svg {
+      position: absolute;
+      filter: drop-shadow(0px 0px 23px hsla(1, 0, 100%, .7));
+   }
+   &__path {
+   }
+
+   &__logo{
+      color: var(--first-color);
+      font-family: var(--text-ff-title);
+      font-size: 58px;
+      font-weight: bold;
+      position: absolute;
+      top: 39%;
+      left: 11%;
+      transform: rotate(0.9turn);
+      text-shadow: 0px 0px 3px var(--first-color)  ;
+      filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+   }
+}
+.circle {
+   &_1 {
+      stroke: var(--abstraction-color-circle-1);
+      & .abstraction__path{
+         filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-1));
+      }
+   }
+   &_2{
+      transform: translate(156px, 180px) scale(0.3);
+      stroke: var(--abstraction-color-circle-2);
+      & .abstraction__path{
+         filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-2));
+      }
+   }
+   &_3{
+      transform:  translate(-46px, 230px) scale(0.2);
+      stroke: var(--abstraction-color-circle-3);
+      & .abstraction__path{
+         filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-3));
+      }
    }
 }

@@ -2,7 +2,7 @@
 const navMenu = document.getElementById('nav-menu'),
       showMenu = document.getElementById('btn-menu'),
       closeMenu = document.getElementById('btn-close'),
-      sectionsHidden = document.querySelectorAll('.section');
+      sectionsHidden = document.querySelectorAll('.section, .background-abstraction');
 
 if(showMenu){
    showMenu.addEventListener('click', () =>{
@@ -10,8 +10,7 @@ if(showMenu){
       showMenu.classList.remove('show-menu-btn');
       sectionsHidden.forEach((item => 
          item.classList.add('section-hidden')
-         ));
-      
+      ));
    })
 }
 if(closeMenu){
@@ -20,7 +19,6 @@ if(closeMenu){
       showMenu.classList.add('show-menu-btn');
       sectionsHidden.forEach((item => 
          item.classList.remove('section-hidden')
-         ));
-
+      ));
    })
 }
