@@ -255,13 +255,13 @@ body {
   margin: auto;
 }
 
-.section {
+.move {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
 }
 
-.section-hidden {
+.move-hidden {
   opacity: 0;
 }
 
