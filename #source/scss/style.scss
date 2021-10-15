@@ -6,6 +6,18 @@
 
 
 :root{
+
+
+   --header-height: 100%;
+   --border-radius: 8px;
+
+   --text-ff-title: 'Offside', cursive;
+   --text-ff: 'Open Sans', sans-serif;
+   --text-size-title: 2rem;
+
+   --z-tooltip: 10;
+}
+body{
    --hue-color: 341;
    --first-color: hsl(var(--hue-color), 88%, 54%);
    --first-color-alt: hsl(var(--hue-color), 73%, 63%);
@@ -31,16 +43,7 @@
    inset 0px 0px 18px var(--first-color),
    inset 0px 0px 53px var(--first-color-light);
 
-   --header-height: 100%;
-   --border-radius: 8px;
 
-   --text-ff-title: 'Offside', cursive;
-   --text-ff: 'Open Sans', sans-serif;
-   --text-size-title: 2rem;
-
-   --z-tooltip: 10;
-}
-body{
    font-family: var(--text-ff);
 }
 
@@ -113,12 +116,15 @@ body{
       filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
    }
    &__buttons{
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
+      // margin: 0;
+      // display: flex;
+      // justify-content: space-around;
    }
    &__btn{
-      &_theme{}
+      &_theme{
+         margin: 0 auto;
+         display: block;
+      }
       &_color{}
       &_close{
          position: absolute;
@@ -131,6 +137,16 @@ body{
          right: calc(3rem + 4px);
          transition: .3s;
          transform: translate(600px);
+      }
+   }
+   &__input{
+      color: white;
+      background-color: white;
+      border: none;
+      border-color: white;
+      &::-webkit-slider-thumb{
+         color: white;
+         background-color: #fff;
       }
    }
 }

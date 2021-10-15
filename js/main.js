@@ -2,7 +2,9 @@
 const navMenu = document.getElementById('nav-menu'),
       showMenu = document.getElementById('btn-menu'),
       closeMenu = document.getElementById('btn-close'),
-      sectionsHidden = document.querySelectorAll('.move, .background-abstraction');
+      sectionsHidden = document.querySelectorAll('.move, .background-abstraction'),
+      hueColor = document.getElementById('hue-color'),
+      body = document.querySelector('body');
 
 if(showMenu){
    showMenu.addEventListener('click', () =>{
@@ -22,3 +24,12 @@ if(closeMenu){
       ));
    })
 }
+if(hueColor){
+   hueColor.addEventListener('mousemove', handleUpdate);
+   function handleUpdate () {
+      body.style.setProperty('--hue-color', hueColor.value);
+   }
+
+}
+
+
