@@ -84,12 +84,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  --hue-color: 341;
-  --first-color: hsl(var(--hue-color), 88%, 54%);
-  --first-color-alt: hsl(var(--hue-color), 73%, 63%);
-  --first-color-light: hsla(var(--hue-color), 53%, 89%, .2);
-  --wrapper-background-color: hsla(223, 100%, 1%, 0.97);
-  --block-background-color: hsl(var(--hue-color), 93%, 3%);
+  --hue-color: 340;
+  --first-color: hsl(var(--hue-color), 93%, 57%);
+  --first-color-alt: hsl(-webkit-calc(var(--hue-color) + 3), 69%, 51%);
+  --first-color-alt: hsl(calc(var(--hue-color) + 3), 69%, 51%);
+  --first-color-hover: hsl(var(--hue-color), 100%, 64%);
+  --light-color: hsl(-webkit-calc(var(--hue-color) - 280), 100%, 90%);
+  --light-color: hsl(calc(var(--hue-color) - 280), 100%, 90%);
+  --light-color-alt: hsl(-webkit-calc(var(--hue-color) - 284), 90%, 79%);
+  --light-color-alt: hsl(calc(var(--hue-color) - 284), 90%, 79%);
+  --light-color-hover: hsl(-webkit-calc(var(--hue-color) - 289), 88%, 71%);
+  --light-color-hover: hsl(calc(var(--hue-color) - 289), 88%, 71%);
+  --dark-color: hsl(-webkit-calc(var(--hue-color) - 119), 76%, 5%);
+  --dark-color: hsl(calc(var(--hue-color) - 119), 76%, 5%);
+  --dark-color-alt: hsl(-webkit-calc(var(--hue-color) - 124), 100%, 6%);
+  --dark-color-alt: hsl(calc(var(--hue-color) - 124), 100%, 6%);
+  --dark-color-hover: hsl(-webkit-calc(var(--hue-color) - 127), 83%, 9%);
+  --dark-color-hover: hsl(calc(var(--hue-color) - 127), 83%, 9%);
+  --first-color-shadow: hsla(var(--hue-color), 53%, 89%, .2);
+  --wrapper-background-color: hsla(-webkit-calc(var(--hue-color) - 119), 76%, 2%, 0.97);
+  --wrapper-background-color: hsla(calc(var(--hue-color) - 119), 76%, 2%, 0.97);
   --abstraction-color-line: hsla(189, 96%, 58%, 1);
   --abstraction-color-circle-1: hsla(49, 96%, 68%, 1);
   --abstraction-color-circle-2: hsla(149, 96%, 68%, 1);
@@ -98,14 +112,14 @@ body {
   --abstraction-color-rect-2: hsla(98.9, 90%, 68%, 1);
   --abstraction-color-trigon-1: hsla(165.9, 100%, 38%, 1);
   --abstraction-color-trigon-2: hsla(18.9, 100%, 78%, 1);
-  --neon-box-shadow: 0px 0px 103px var(--first-color-light),
+  --neon-box-shadow: 0px 0px 103px var(--first-color-shadow),
    0px 0px 28px var(--first-color),
    inset 0px 0px 28px var(--first-color),
-   inset 0px 0px 103px var(--first-color-light);
-  --neon-box-shadow-thin: 0px 0px 53px var(--first-color-light),
+   inset 0px 0px 103px var(--first-color-shadow);
+  --neon-box-shadow-thin: 0px 0px 53px var(--first-color-shadow),
    0px 0px 18px var(--first-color),
    inset 0px 0px 18px var(--first-color),
-   inset 0px 0px 53px var(--first-color-light);
+   inset 0px 0px 53px var(--first-color-shadow);
   font-family: var(--text-ff);
 }
 

@@ -24,12 +24,5 @@ if(closeMenu){
       ));
    })
 }
-if(hueColor){
-   hueColor.addEventListener('mousemove', handleUpdate);
-   function handleUpdate () {
-      body.style.setProperty('--hue-color', hueColor.value);
-   }
-
-}
 
 
