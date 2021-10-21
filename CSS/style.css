@@ -92,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
   --dark-color-alt: hsl(calc(var(--hue-color) - 124), 100%, 6%);
   --dark-color-hover: hsl(-webkit-calc(var(--hue-color) - 127), 83%, 9%);
   --dark-color-hover: hsl(calc(var(--hue-color) - 127), 83%, 9%);
-  --first-color-shadow: hsla(var(--hue-color), 53%, 89%, .2);
   --wrapper-background-color: hsla(-webkit-calc(var(--hue-color) - 119), 76%, 2%, 0.97);
   --wrapper-background-color: hsla(calc(var(--hue-color) - 119), 76%, 2%, 0.97);
   --abstraction-color-line: hsla(189, 96%, 58%, 1);
@@ -103,14 +102,10 @@ h1, h2, h3, h4, h5, h6 {
   --abstraction-color-rect-2: hsla(98.9, 90%, 68%, 1);
   --abstraction-color-trigon-1: hsla(165.9, 100%, 38%, 1);
   --abstraction-color-trigon-2: hsla(18.9, 100%, 78%, 1);
-  --neon-box-shadow: 0px 0px 103px var(--first-color-shadow),
-   0px 0px 28px var(--first-color),
-   inset 0px 0px 28px var(--first-color),
-   inset 0px 0px 103px var(--first-color-shadow);
-  --neon-box-shadow-thin: 0px 0px 53px var(--first-color-shadow),
-   0px 0px 18px var(--first-color),
-   inset 0px 0px 18px var(--first-color),
-   inset 0px 0px 53px var(--first-color-shadow);
+  --neon-box-shadow: 0px 0px 28px var(--first-color),
+	inset 0px 0px 28px var(--first-color);
+  --neon-box-shadow-thin: 0px 0px 18px var(--first-color),
+	inset 0px 0px 18px var(--first-color);
   --header-height: 100%;
   --border-radius: 8px;
   --text-ff-title: 'Offside', cursive;
@@ -133,30 +128,24 @@ body {
   -webkit-tap-highlight-color: transparent;
   font-size: 0;
   z-index: var(--z-tooltip);
-  -webkit-filter: drop-shadow(0px 0px 23px rgba(255, 255, 255, 0.7));
-          filter: drop-shadow(0px 0px 23px rgba(255, 255, 255, 0.7));
 }
 
 .title {
   font-family: var(--text-ff-title);
   color: var(--first-color);
   font-size: var(--text-size-title);
-  text-shadow: 0px 0px 3px var(--first-color);
-  -webkit-filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
-          filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+  text-shadow: 0px 0px 5px var(--first-color);
   text-transform: uppercase;
 }
 
 .title_h2 {
   font-family: var(--text-ff-title);
-  color: var(--first-color);
   font-size: var(--text-size-title);
-  text-shadow: 0px 0px 3px var(--first-color);
-  -webkit-filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
-          filter: drop-shadow(0px 0px 15px hsla(var(--hue-color), 53%, 89%, 0.4));
+  text-shadow: 0px 0px 5px var(--light-color-alt);
   text-transform: uppercase;
   font-size: var(--text-size-h2);
   font-weight: bold;
+  color: var(--light-color-alt);
 }
 
 .wrapper {
@@ -196,15 +185,14 @@ body {
   margin: auto;
   left: -webkit-calc(50% - 144px);
   left: calc(50% - 144px);
-  top: -webkit-calc(50% - 144px);
-  top: calc(50% - 144px);
+  -webkit-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+          transform: translate(0, 50%);
   position: absolute;
 }
 
 .abstraction__svg {
   position: absolute;
-  -webkit-filter: drop-shadow(0px 0px 23px rgba(255, 255, 255, 0.7));
-          filter: drop-shadow(0px 0px 23px rgba(255, 255, 255, 0.7));
 }
 
 .abstraction__logo {
@@ -460,6 +448,9 @@ body {
 
 .move-hidden {
   opacity: 0;
+  -webkit-transform: translate(-100%);
+      -ms-transform: translate(-100%);
+          transform: translate(-100%);
 }
 
 .home {
@@ -478,32 +469,42 @@ body {
 
 .about__h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .about__title {
+  display: inline-block;
   border: 2px solid var(--first-color);
   -webkit-border-radius: var(--border-radius);
           border-radius: var(--border-radius);
   -webkit-box-shadow: var(--neon-box-shadow-thin);
           box-shadow: var(--neon-box-shadow-thin);
   padding: 1rem;
-  margin: 2rem;
+  margin: 0 1.5rem;
   font-size: 1.5rem;
 }
 
 .about__content {
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .about__text {
   color: var(--light-color-alt);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about__slide {
+  overflow: hidden;
+  -webkit-border-radius: var(--border-radius);
+          border-radius: var(--border-radius);
 }
 
 .about__img {
+  height: 400px;
   -webkit-border-radius: var(--border-radius);
           border-radius: var(--border-radius);
-  overflow: hidden;
+}
+
+.swiper {
   height: 400px;
 }
