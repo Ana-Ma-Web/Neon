@@ -25,9 +25,13 @@ if(closeMenu){
 	})
 }
 
-const swiper = new Swiper('.swiper', {
-	direction: 'horizontal',
-	loop: true,
-	slidesPerView: 1.1,
+const sliders = document.querySelectorAll('.swiper');
+sliders.forEach((el) => {
+	let mySwiper = new Swiper(el, {
+		direction: 'horizontal',
+		loop: true,
+		slidesPerView: 1.1,
+	});
+	
 });
 
