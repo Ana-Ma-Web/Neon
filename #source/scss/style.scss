@@ -319,6 +319,12 @@ body{
 	}
 }
 
+.description{
+	margin: 1rem 2rem;
+	color: var(--light-color-alt);
+
+}
+
 .block{
 	border: 2px solid var(--first-color);
 	border-radius: var(--border-radius);
@@ -328,10 +334,17 @@ body{
 
 }
 
+.swiper{
+	height: 400px;
+}
+
 .about {
 
 	&__h2 {
 		text-align: center;
+	}
+
+	&__description{
 	}
 
 	&__block {
@@ -365,6 +378,37 @@ body{
 	}
 }
 
-.swiper{
-	height: 400px;
+.delivery {
+
+	&__h2 {
+		text-align: center;
+
+	}
+
+	&__description {
+	}
+
+	&__block {
+	}
+
+	&__list{
+		padding-left: 1rem;
+	}
+
+	&__item{
+		height: 2rem;
+		padding-left: 1rem;
+		position: relative;
+		color: var(--light-color-alt);
+		&::before{
+			content: '';
+			background-color: var(--light-color-alt);
+			height: .5rem;
+			width: .5rem;
+			position: absolute;
+			top: 0.3rem;
+			left: 0;
+			border-radius: 50%;
+		}
+	}
 }
