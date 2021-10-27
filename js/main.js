@@ -35,3 +35,9 @@ sliders.forEach((el) => {
 	
 });
 
+
+document.querySelectorAll('.accordion__control').forEach((item) => 
+	item.addEventListener('click', () => {
+		item.parentNode.classList.toggle('is-open');
+	})
+)

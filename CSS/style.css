@@ -564,8 +564,28 @@ img {
           border-radius: 50%;
 }
 
+.accordion {
+  --accordion-time: .3s;
+}
+
+.accordion__content {
+  display: none;
+}
+
+.is-open .accordion__content {
+  display: block;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faq__block {
+  padding: 1rem 1rem;
+  margin: 2rem;
+}
+
 .faq__question {
-  padding-bottom: 1rem;
+  color: var(--light-color-alt);
+  font-size: 1rem;
 }
 
 .faq__answer {

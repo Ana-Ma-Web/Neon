@@ -429,19 +429,36 @@ img{
 	}
 }
 
+.accordion{
+	--accordion-time: .3s;
+	&__content{
+		display: none;
+	}
+}
+
+.is-open .accordion__content{
+	display: block;
+	padding-top: 1rem;
+	margin-bottom: 1rem;
+}
+
 .faq {
 
 	&__h2 {
 	}
 
 	&__block {
+		padding: 1rem 1rem;
+		margin: 2rem;
 	}
 
 	&__question {
-		padding-bottom: 1rem;
+		color: var(--light-color-alt);
+		font-size: 1rem;
 	}
 
 	&__answer {
-		color: var(--light-color);
+		color: var(--light-color);		
+
 	}
 }
