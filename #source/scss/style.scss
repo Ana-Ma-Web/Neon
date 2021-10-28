@@ -51,6 +51,11 @@
 	--z-tooltip: 10;
 	--z-bg: -1;
 }
+
+input{
+	background-color: transparent;
+	color: var(--light-color);
+}
 body{
 	font-family: var(--text-ff);
 	color: var(--light-color-alt);
@@ -450,6 +455,9 @@ img{
 	&__block {
 		padding: 1rem 1rem;
 		margin: 2rem;
+		&:last-child{
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__question {
@@ -460,5 +468,59 @@ img{
 	&__answer {
 		color: var(--light-color);		
 
+	}
+}
+
+.input-item {
+	width: 100%;
+	padding-bottom: .5rem;
+	&:last-child{
+		padding: 0;
+	}
+
+}
+.label-radio{
+	position: relative;
+	padding-left: 1.3rem;
+}
+.input-radio{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.check-box{
+	position: absolute;
+	top: .2rem;
+	left: 0;
+	height: 1rem;
+	width: 1rem;
+	content: '';
+	border: 1px solid var(--first-color);
+	border-radius: 50%;
+}
+
+.input-radio:checked + .check-box{
+	box-shadow: 0 0 8px var(--first-color),
+	inset 0px 0px 5px var(--first-color);
+
+}
+
+.form {
+
+	&__list {
+	}
+
+	&__input {
+		padding: 1rem;
+		margin: 1rem;
+	}
+}
+
+.contact {
+
+	&__h2 {
 	}
 }

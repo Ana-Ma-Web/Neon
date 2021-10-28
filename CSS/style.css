@@ -117,6 +117,11 @@ h1, h2, h3, h4, h5, h6 {
   --z-bg: -1;
 }
 
+input {
+  background-color: transparent;
+  color: var(--light-color);
+}
+
 body {
   font-family: var(--text-ff);
   color: var(--light-color-alt);
@@ -583,6 +588,10 @@ img {
   margin: 2rem;
 }
 
+.faq__block:last-child {
+  margin-bottom: 4rem;
+}
+
 .faq__question {
   color: var(--light-color-alt);
   font-size: 1rem;
@@ -590,4 +599,48 @@ img {
 
 .faq__answer {
   color: var(--light-color);
+}
+
+.input-item {
+  width: 100%;
+  padding-bottom: .5rem;
+}
+
+.input-item:last-child {
+  padding: 0;
+}
+
+.label-radio {
+  position: relative;
+  padding-left: 1.3rem;
+}
+
+.input-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check-box {
+  position: absolute;
+  top: .2rem;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  content: '';
+  border: 1px solid var(--first-color);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.input-radio:checked + .check-box {
+  -webkit-box-shadow: 0 0 8px var(--first-color), inset 0px 0px 5px var(--first-color);
+          box-shadow: 0 0 8px var(--first-color), inset 0px 0px 5px var(--first-color);
+}
+
+.form__input {
+  padding: 1rem;
+  margin: 1rem;
 }
