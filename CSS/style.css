@@ -478,7 +478,7 @@ img {
 }
 
 .section-text {
-  margin: 1rem 0rem;
+  margin: 1rem 2rem;
   color: var(--light-color-alt);
 }
 
@@ -539,7 +539,7 @@ img {
 }
 
 .delivery__description {
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 }
 
 .delivery__block {
@@ -603,11 +603,6 @@ img {
 
 .input-item {
   width: 100%;
-  padding-bottom: .5rem;
-}
-
-.input-item:last-child {
-  padding: 0;
 }
 
 .label-radio {
@@ -642,5 +637,24 @@ img {
 
 .form__input {
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__button {
+  padding: 0rem;
+  margin: 1rem auto;
+  width: 70px;
+}
+
+.form__button-svg_path {
+  fill: var(--first-color);
+  -webkit-filter: drop-shadow(0px 0px 3px var(--first-color));
+          filter: drop-shadow(0px 0px 3px var(--first-color));
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }

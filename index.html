@@ -56,16 +56,16 @@
 							<a href="#" class="nav__link title">Buy</a>
 						</li>
 						<li class="nav__item">
-							<a href="#" class="nav__link title">About Us</a>
+							<a href="#about" class="nav__link title">About Us</a>
 						</li>
 						<li class="nav__item ">
-							<a href="#" class="nav__link title">Delivery</a>
+							<a href="#delivery" class="nav__link title">Delivery</a>
 						</li>
 						<li class="nav__item">
-							<a href="#" class="nav__link title">FAQ</a>
+							<a href="#faq" class="nav__link title">FAQ</a>
 						</li>
 						<li class="nav__item">
-							<a href="#" class="nav__link title">Contacts</a>
+							<a href="#contact" class="nav__link title">Contacts</a>
 						</li>
 						<li class="nav__item nav__buttons">
 							<button class="nav__link nav__btn_theme button">
@@ -88,14 +88,14 @@
 				</svg>
 			</button>
 		</header>
-		<a href="#" class="move home__button button">
+		<a href="#about" class="move home__button button">
 			<div class="home__button_text title">Explore</div>
 			
 			<svg class="img-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" width="34" height="34">
 				<path fill="var(--first-color)" d="M6 5.17 10.24.93a1 1 0 1 1 1.41 1.41L6.72 7.3a1 1 0 0 1-1.42 0L.34 2.34A1 1 0 1 1 1.75.93L6 5.17Z"/>
 			</svg>
 		</a>
-		<section class="about move">
+		<section class="about move" id="about" >
 			<h2 class="about__h2 title_h2">Products</h2>
 			<div class="about__description">
 				<div class="about__img section-img">
@@ -240,7 +240,7 @@
 					</div>
 				</div>
 		</section>
-		<section class="delivery move">
+		<section class="delivery move" id="delivery" >
 			<h2 class="delivery__h2 title_h2">Delivery</h2>
 			<div class="delivery__description section-text">
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quisquam soluta iusto nemo maxime, eum excepturi quia id veniam doloribus. Nobis est quam doloremque quisquam?
@@ -255,7 +255,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="faq move">
+		<section class="faq move" id="faq" >
 			<h2 class="faq__h2 title_h2">FAQ</h2>
 			<div class="faq__block block accordion" >
 				<button class="faq__question accordion__control">
@@ -307,22 +307,25 @@
 				</div>
 			</div>
 		</section>
-		<section class="contact move">
+		<section class="contact move" id="contact" >
 			<h2 class="contact__h2 title_h2">Contact us</h2>
 			<form action="" class="form">
 				<ul class="form__list">
 					<li class="form__input block">
-						<input placeholder="Name" type="text" class="input-item">
+						<input placeholder="Name" name="name" id="name" type="text" class="input-item">
 					</li>
 					<li class="form__input block">
-						<input placeholder="Email" type="email" class="input-item">
+						<input placeholder="Email" name="email" id="email" type="email" class="input-item">
 					</li>
 					<li class="form__input block">
-						<input placeholder="Phone" type="phone" class="input-item">
+						<input placeholder="Phone" name="phone" id="phone" type="phone" class="input-item">
 					</li>
 					<li class="form__input block">
-						<input placeholder="Approximate size (lenght/height)" type="text" class="input-item">
+						<input placeholder="Approximate size (lenght/height)" name="size" id="size" type="text" class="input-item">
 					</li>
+					<div class="section-text" >
+						Please tell us approximately how large you would like this sign to be. If you aren't sure, we'll be happy to give you a recommendation.
+					</div>
 					<li class="form__input block">
 						<div class="input-item">
 							<label class="label-radio" >
@@ -338,6 +341,13 @@
 								Outdoor
 							</label>
 						</div>
+					</li>
+					<li class="form__button block">
+						<button type="submit" class="input-item" >
+							<svg class="form__button-svg" fill="none" xmlns="http://www.w3.org/2000/svg" height="39" width="51" viewBox="-7 -7 31 29">
+								<path class="form__button-svg_path" d="M4.7 8.3a1 1 0 0 1-1.4 0L.5 5.5A1 1 0 1 1 1.9 4L4 6l5-4.9a1 1 0 0 1 1.4 1.4L4.7 8.3Z"></path>
+							</svg>
+						</button>
 					</li>
 				</ul>
 			</form>
