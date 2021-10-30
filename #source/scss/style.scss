@@ -336,7 +336,7 @@ img{
 
 .section-img{
 	height: 400px;
-	margin: 1rem auto;
+	margin: 1rem 2rem;
 	max-width: 300px;
 	overflow: hidden;
 }
@@ -362,7 +362,6 @@ img{
 	}
 
 	&__description{
-		margin: 0rem 2rem;
 	}
 
 	&__block {
@@ -473,11 +472,6 @@ img{
 
 .input-item {
 	width: 100%;
-	// padding-bottom: .5rem;
-	// &:last-child{
-	// 	padding: 0;
-	// }
-
 }
 .label-radio{
 	position: relative;
@@ -505,7 +499,6 @@ img{
 .input-radio:checked + .check-box{
 	box-shadow: 0 0 8px var(--first-color),
 	inset 0px 0px 5px var(--first-color);
-
 }
 
 .form {
