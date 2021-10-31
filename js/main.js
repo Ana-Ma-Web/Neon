@@ -29,8 +29,13 @@ const sliders = document.querySelectorAll('.swiper');
 sliders.forEach((el) => {
 	let mySwiper = new Swiper(el, {
 		direction: 'horizontal',
+		slidesPerView: 1,
 		loop: true,
-		slidesPerView: 1.1,
+		spaceBetween: 5,
+		navigation: {
+			nextEl: el.querySelector('.swiper-button-next'),
+			prevEl: el.querySelector('.swiper-button-prev'),
+		},
 	});
 	
 });
