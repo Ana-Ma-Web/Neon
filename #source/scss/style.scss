@@ -531,7 +531,15 @@ img{
 	&__input {
 		padding: 1rem;
 		margin: 1rem 2rem;
+		// display: flex;
+		&_radio{
 		display: flex;
+		}
+		&_text{
+		margin-top: 1rem;
+		font-size: var(--text-size-small);
+		}
+
 	}
 	&__button{
 		padding: 0rem;

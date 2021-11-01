@@ -1,27 +1,42 @@
 // ===== SHOW MENU =====
 const navMenu = document.getElementById('nav-menu'),
-			showMenu = document.getElementById('btn-menu'),
-			closeMenu = document.getElementById('btn-close'),
-			sectionsHidden = document.querySelectorAll('.move, .background-abstraction'),
-			hueColor = document.getElementById('hue-color'),
-			body = document.querySelector('body');
+		showMenuBtn = document.getElementById('btn-menu'),
+		closeMenuBtn = document.getElementById('btn-close'),
+		sectionsHidden = document.querySelectorAll('.move, .background-abstraction'),
+		hueColor = document.getElementById('hue-color'),
+		body = document.querySelector('body'),
+		navLink = document.querySelectorAll('.nav__link');
 
-if(showMenu){
-	showMenu.addEventListener('click', () =>{
-			navMenu.classList.add('show-menu');
-			showMenu.classList.remove('show-menu-btn');
-			sectionsHidden.forEach((item => 
-				item.classList.add('move-hidden')
-			));
+function closeMenu (){
+	navMenu.classList.remove('show-menu');
+	showMenuBtn.classList.add('show-menu-btn');
+	sectionsHidden.forEach((item => 
+		item.classList.remove('move-hidden')
+	));
+}
+function showMenu () {
+	navMenu.classList.add('show-menu');
+	showMenuBtn.classList.remove('show-menu-btn');
+	sectionsHidden.forEach((item => 
+		item.classList.add('move-hidden')
+	));
+}
+
+if(showMenuBtn){
+	showMenuBtn.addEventListener('click', () =>{
+		showMenu();
 	})
 }
-if(closeMenu){
-	closeMenu.addEventListener('click', () => {
-			navMenu.classList.remove('show-menu');
-			showMenu.classList.add('show-menu-btn');
-			sectionsHidden.forEach((item => 
-				item.classList.remove('move-hidden')
-			));
+if(closeMenuBtn){
+	closeMenuBtn.addEventListener('click', () => {
+		closeMenu();
+	})
+}
+if(navLink){
+	navLink.forEach((el) => {
+		el.addEventListener('click', () => {
+			closeMenu();
+		})
 	})
 }
 
