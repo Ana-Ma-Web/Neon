@@ -631,13 +631,17 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  text-align: left;
 }
 
 .faq__arrow {
   padding-top: 0.125rem;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg) translate(-1.5rem, 0rem);
+      -ms-transform: rotate(-90deg) translate(-1.5rem, 0rem);
+          transform: rotate(-90deg) translate(-1.5rem, 0rem);
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .faq__arrow_path {
@@ -700,6 +704,34 @@ img {
   font-size: var(--text-size-small);
 }
 
+.form__input_message {
+  background-color: transparent;
+  color: var(--light-color);
+  min-width: -webkit-calc(100% - 4rem);
+  min-width: calc(100% - 4rem);
+  max-width: -webkit-calc(100% - 4rem);
+  max-width: calc(100% - 4rem);
+  min-height: 4rem;
+  max-height: 12rem;
+  margin: 0 2rem;
+}
+
+.form__input_message::-webkit-input-placeholder {
+  font-size: var(--text-size-small);
+}
+
+.form__input_message:-ms-input-placeholder {
+  font-size: var(--text-size-small);
+}
+
+.form__input_message::-ms-input-placeholder {
+  font-size: var(--text-size-small);
+}
+
+.form__input_message::placeholder {
+  font-size: var(--text-size-small);
+}
+
 .form__button {
   padding: 0rem;
   margin: 1rem auto;
@@ -713,4 +745,33 @@ img {
   -webkit-transform: scale(1.5);
       -ms-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+@media (min-width: 576px) {
+  .form__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .form__list {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .form__input {
+    margin-right: 0;
+  }
+  .form__input_message {
+    margin: 1rem 2rem;
+    resize: none;
+    width: 100%;
+    min-height: -webkit-calc(100% - 6rem);
+    min-height: calc(100% - 6rem);
+  }
+  .form__input_message-wrapper {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
 }

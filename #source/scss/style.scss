@@ -477,10 +477,14 @@ img{
 		color: var(--light-color-alt);
 		font-size: 1rem;
 		display: flex;
+		text-align: left;
 	}
 	&__arrow{
 		padding-top: 0.125rem;
-		transform: rotate(-90deg);
+		transform: 
+		rotate(-90deg) 
+		translate(-1.5rem, 0rem);
+		transform-origin: top left;
 		&_path{
 			filter: drop-shadow(0px 0px 3px var(--first-color));
 		}
@@ -525,13 +529,16 @@ img{
 
 .form {
 
+	&__wrapper{
+
+	}
+
 	&__list {
 	}
 
 	&__input {
 		padding: 1rem;
 		margin: 1rem 2rem;
-		// display: flex;
 		&_radio{
 		display: flex;
 		}
@@ -539,7 +546,19 @@ img{
 		margin-top: 1rem;
 		font-size: var(--text-size-small);
 		}
-
+		&_message{
+			background-color: transparent;
+			color: var(--light-color);
+			min-width: calc(100% - 4rem);
+			max-width: calc(100% - 4rem);
+			min-height: 4rem;
+			max-height: 12rem;
+			// max-width: 100%;
+			margin: 0 2rem;
+			&::placeholder{
+				font-size: var(--text-size-small);
+			}
+		}
 	}
 	&__button{
 		padding: 0rem;
@@ -558,5 +577,38 @@ img{
 .contact {
 
 	&__h2 {
+	}
+}
+
+
+
+
+@media (min-width: 576px) {
+
+	.form{
+		&__wrapper{
+			display: flex;
+		}
+		&__list{
+			flex-basis: 50%;
+		}
+		&__input{
+			margin-right: 0;
+			&_message{
+				&-wrapper{
+					// width: 100%;
+					flex-basis: 50%;
+
+				}
+				margin: 1rem 2rem;
+				resize: none;
+				width: 100%;
+				// max-width: calc(50% - 2rem);
+				// min-width: calc(50% - 2rem);
+
+				min-height: calc(100% - 6rem);
+				// max-height: calc(100% - 6rem);
+			}
+		}
 	}
 }

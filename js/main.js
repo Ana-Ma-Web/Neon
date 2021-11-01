@@ -51,8 +51,12 @@ sliders.forEach((el) => {
 			nextEl: el.querySelector('.swiper-button-next'),
 			prevEl: el.querySelector('.swiper-button-prev'),
 		},
+		breakpoints:{
+			576:{
+				slidesPerView: 2
+			},
+		}
 	});
-	
 });
 
 
