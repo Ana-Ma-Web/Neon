@@ -11,14 +11,6 @@
   box-sizing: border-box;
 }
 
-:focus, :active {
-  outline: none;
-}
-
-a:focus, a:active {
-  outline: none;
-}
-
 nav, footer, header, aside {
   display: block;
 }
@@ -76,8 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --hue-color: 340;
   --first-color: hsl(var(--hue-color), 93%, 57%);
-  --first-color-alt: hsl(-webkit-calc(var(--hue-color) + 3), 69%, 51%);
-  --first-color-alt: hsl(calc(var(--hue-color) + 3), 69%, 51%);
+  --first-color-alt: hsl(-webkit-calc(var(--hue-color) + 8), 99%, 73%);
+  --first-color-alt: hsl(calc(var(--hue-color) + 8), 99%, 73%);
   --first-color-hover: hsl(var(--hue-color), 100%, 64%);
   --light-color: hsl(-webkit-calc(var(--hue-color) - 280), 100%, 90%);
   --light-color: hsl(calc(var(--hue-color) - 280), 100%, 90%);
@@ -392,6 +384,28 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.nav__link::before {
+  content: "";
+  height: 1.5em;
+  width: 10rem;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: -webkit-calc(50% - 5rem);
+  left: calc(50% - 5rem);
+  top: -.1em;
+}
+
+.nav__link:focus-visible {
+  outline: none;
+}
+
+.nav__link:focus-visible::before {
+  outline: 1px solid var(--first-color-alt);
 }
 
 .nav__btn_theme {
@@ -399,10 +413,44 @@ img {
   display: block;
 }
 
+.nav__btn_theme::before {
+  left: -webkit-calc(50% - 1.5rem);
+  left: calc(50% - 1.5rem);
+  top: -.42rem;
+  height: 2.7rem;
+  width: 3rem;
+}
+
+.nav__btn_theme:focus-visible::before {
+  outline: 1px solid var(--first-color-alt);
+}
+
 .nav__btn_close {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+.nav__btn_close::before {
+  content: "";
+  height: 3rem;
+  width: 3rem;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: -webkit-calc(50% - 1.5rem);
+  left: calc(50% - 1.5rem);
+  top: -webkit-calc(50% - 1.5rem);
+  top: calc(50% - 1.5rem);
+}
+
+.nav__btn_close:focus-visible {
+  outline: none;
+}
+
+.nav__btn_close:focus-visible::before {
+  outline: 1px solid var(--first-color-alt);
 }
 
 .nav__btn_menu {
@@ -509,6 +557,28 @@ img {
   color: var(--first-color);
   -webkit-filter: drop-shadow(0px 0px 3px var(--first-color));
           filter: drop-shadow(0px 0px 3px var(--first-color));
+}
+
+.swiper-button-next::before, .swiper-button-prev::before {
+  content: "";
+  height: 3rem;
+  width: 2.7rem;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: -webkit-calc(50% - 1.35rem);
+  left: calc(50% - 1.35rem);
+  top: -webkit-calc(50% - 1.5rem);
+  top: calc(50% - 1.5rem);
+}
+
+.swiper-button-next:focus-visible, .swiper-button-prev:focus-visible {
+  outline: none;
+}
+
+.swiper-button-next:focus-visible::before, .swiper-button-prev:focus-visible::before {
+  outline: 1px solid var(--first-color-alt);
 }
 
 .about__images {
@@ -628,6 +698,12 @@ img {
   color: var(--light-color-alt);
   font-size: 1rem;
   text-align: left;
+  -webkit-border-radius: var(--border-radius);
+          border-radius: var(--border-radius);
+}
+
+.faq__question:focus-visible {
+  outline: 1px solid var(--first-color-alt);
 }
 
 .faq__arrow {
@@ -654,6 +730,10 @@ img {
 
 .input-item {
   width: 100%;
+}
+
+.input-item:focus-visible {
+  outline: 1px solid var(--first-color-alt);
 }
 
 .label-radio {
@@ -715,6 +795,10 @@ img {
   margin: 0 2rem;
 }
 
+.form__input_message:focus-visible {
+  outline: 1px solid var(--first-color-alt);
+}
+
 .form__input_message::-webkit-input-placeholder {
   font-size: var(--text-size-small);
 }
@@ -744,6 +828,32 @@ img {
   -webkit-transform: scale(1.5);
       -ms-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.form__button_submit {
+  position: relative;
+}
+
+.form__button_submit::before {
+  content: "";
+  height: 2.2rem;
+  width: 2.7rem;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: -webkit-calc(50% - 1.35rem);
+  left: calc(50% - 1.35rem);
+  top: -webkit-calc(50% - 1.1rem);
+  top: calc(50% - 1.1rem);
+}
+
+.form__button_submit:focus-visible {
+  outline: none;
+}
+
+.form__button_submit:focus-visible::before {
+  outline: 1px solid var(--first-color-alt);
 }
 
 @media (min-width: 576px) {
