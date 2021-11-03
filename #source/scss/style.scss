@@ -456,7 +456,7 @@ img{
 	margin-bottom: 1rem;
 }
 .is-open .faq__arrow{
-	transform: rotate(0deg) translate(-0.25rem);
+	transform: rotate(0deg) translate(-0.33rem);
 
 }
 
@@ -476,15 +476,22 @@ img{
 	&__question {
 		color: var(--light-color-alt);
 		font-size: 1rem;
-		display: flex;
+		// display: flex;
 		text-align: left;
+		&__text{
+
+		}
 	}
 	&__arrow{
 		padding-top: 0.125rem;
 		transform: 
 		rotate(-90deg) 
-		translate(-1.5rem, 0rem);
+		translate(-1.5rem, -.2rem);
 		transform-origin: top left;
+		height: 22px;
+		float: left;
+		width: 22px;
+		
 		&_path{
 			filter: drop-shadow(0px 0px 3px var(--first-color));
 		}
@@ -596,18 +603,12 @@ img{
 			margin-right: 0;
 			&_message{
 				&-wrapper{
-					// width: 100%;
 					flex-basis: 50%;
-
 				}
 				margin: 1rem 2rem;
 				resize: none;
 				width: 100%;
-				// max-width: calc(50% - 2rem);
-				// min-width: calc(50% - 2rem);
-
 				min-height: calc(100% - 6rem);
-				// max-height: calc(100% - 6rem);
 			}
 		}
 	}
