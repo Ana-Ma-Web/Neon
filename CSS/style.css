@@ -467,6 +467,28 @@ img {
           transform: translate(600px);
 }
 
+.nav__btn_menu::before {
+  content: "";
+  height: 3rem;
+  width: 3rem;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: -webkit-calc(50% - 1.5rem);
+  left: calc(50% - 1.5rem);
+  top: -webkit-calc(50% - 1.5rem);
+  top: calc(50% - 1.5rem);
+}
+
+.nav__btn_menu:focus-visible {
+  outline: none;
+}
+
+.nav__btn_menu:focus-visible::before {
+  outline: 1px solid var(--first-color-alt);
+}
+
 .nav__input {
   color: white;
   background-color: white;

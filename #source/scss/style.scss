@@ -316,6 +316,22 @@ img{
 			right: calc(3rem + 4px);
 			transition: .3s;
 			transform: translate(600px);
+			&::before{
+				content: "";
+				height: 3rem;
+				width: 3rem;
+				border-radius: 3px;
+				display: block;
+				position: absolute;
+				left: calc(50% - 1.5rem);
+				top: calc(50% - 1.5rem);
+				}
+			&:focus-visible{
+				outline: none;
+				&::before{
+				outline: 1px solid var(--first-color-alt);
+				}
+			}
 		}
 	}
 	&__input{
