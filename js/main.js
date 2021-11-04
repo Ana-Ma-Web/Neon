@@ -5,7 +5,9 @@ const navMenu = document.getElementById('nav-menu'),
 		sectionsHidden = document.querySelectorAll('.move, .background-abstraction'),
 		hueColor = document.getElementById('hue-color'),
 		body = document.querySelector('body'),
-		navLink = document.querySelectorAll('.nav__link');
+		navLink = document.querySelectorAll('.nav__link'),
+		abstraction = document.getElementById('abstraction'),
+		logo = document.getElementById('abstraction-logo');
 
 function closeMenu (){
 	navMenu.classList.remove('show-menu');
@@ -20,6 +22,22 @@ function showMenu () {
 	sectionsHidden.forEach((item => 
 		item.classList.add('move-hidden')
 	));
+}
+
+function startAnimation () {
+if (abstraction.className === 'animation-1') {
+	abstraction.className = 'animation-2';
+	}else if(abstraction.className === 'animation-2'){
+		abstraction.className = 'animation-3';
+	}else{
+		abstraction.className = 'animation-1';
+	}
+}
+
+if(logo){
+	logo.addEventListener('click', () =>{
+		startAnimation();
+	})
 }
 
 if(showMenuBtn){

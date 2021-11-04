@@ -136,12 +136,18 @@ img{
 		text-shadow: 0px 0px 8px var(--first-color)  ;
 		font-family: var(--text-ff-title);
 		color: var(--first-color);
+		cursor: pointer;
+		user-select: none;
+		transition: ease-in-out .5s;
+
 	}
 }
 .line {
 	&_1 {
 		transform: translate(116px, -50px);
 		fill: var(--abstraction-color-line);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
 		}
@@ -149,6 +155,8 @@ img{
 	&_2 {
 		transform: translate(136px, -70px);
 		fill: var(--abstraction-color-line);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
 		}
@@ -156,6 +164,8 @@ img{
 	&_3 {
 		transform: translate(156px, -50px);
 		fill: var(--abstraction-color-line);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-line));
 		}
@@ -164,6 +174,8 @@ img{
 .circle {
 	&_1 {
 		stroke: var(--abstraction-color-circle-1);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-circle-1));
 		}
@@ -171,13 +183,17 @@ img{
 	&_2{
 		transform: translate(156px, 180px) scale(0.3);
 		stroke: var(--abstraction-color-circle-2);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-2));
 		}
 	}
 	&_3{
-		transform:  translate(-46px, 155px) scale(0.2);
+		transform:  translate(-66px, 185px) scale(0.2);
 		stroke: var(--abstraction-color-circle-3);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 6px var(--abstraction-color-circle-3));
 		}
@@ -187,6 +203,8 @@ img{
 	&_1{
 		transform: translate(-26px, 25px) rotate(0.1turn) scale(0.3);
 		stroke: var(--abstraction-color-rect-1);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-rect-1));
 		}
@@ -194,6 +212,8 @@ img{
 	&_2{
 		transform: translate(26px, -55px) rotate(0.3turn) scale(0.2);
 		stroke: var(--abstraction-color-rect-2);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-rect-2));
 		}
@@ -201,7 +221,8 @@ img{
 }
 .trigon{
 	&_1{
-		transform: translate(-6px, -45px) rotate(.05turn) scale(1.5);
+		transform: translate(-6px, -25px) rotate(0.05turn) scale(1.5);
+		transition: ease-in-out .3s;
 		stroke: var(--abstraction-color-trigon-1);
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-trigon-1));
@@ -210,11 +231,165 @@ img{
 	&_2{
 		transform: translate(185px, 245px) rotate(0.24turn) scale(0.4);
 		stroke: var(--abstraction-color-trigon-2);
+		transition: ease-in-out .5s;
+
 		& .abstraction__path{
 			filter: drop-shadow(0px 0px 3px var(--abstraction-color-trigon-2));
 		}
 	}
 }
+
+//ANIMATION - 2
+.animation-2{
+	& .abstraction {
+	
+		&__logo{
+			transform: 
+				translate(-10px, 80px)
+				rotate(-45deg);
+			transition: ease-in-out .5s;
+		}
+	}
+	& .line {
+		&_1 {
+			transform: 
+				translate(-35px, 0px) 
+				rotate(45deg);
+			transition: ease-in-out .5s;
+
+		}
+		&_2 {
+			transform:
+				translate(175px, -175px)
+				rotate(45deg)
+				scale(.7);
+			transition: ease-in-out .5s;
+
+		}
+		&_3 {
+			transform: 
+				translate(-45px, 90px)
+				rotate(45deg);
+			transition: ease-in-out .5s;
+
+		}
+	}
+	& .circle {
+		&_1 {
+			transform: 
+				translate(-10px, 5px)
+				scale(.8);
+			transition: ease-in-out .5s;
+		}
+		&_2{
+			transform: translate(156px, 240px) scale(0.2);
+			transition: ease-in-out .5s;
+		}
+		&_3{
+			transform:  translate(-46px, 55px) scale(0.25);
+			transition: ease-in-out .5s;
+		}
+	}
+	& .rect{
+		&_1{
+			transform: translate(-56px, -75px) rotate(0.33turn) scale(0.5);
+			transition: ease-in-out .5s;
+		}
+		&_2{
+			transform: translate(56px, -125px) rotate(0.1turn) scale(0.3);
+			transition: ease-in-out .5s;
+		}
+	}
+	
+	& .trigon{
+		&_1{
+			transform: 
+				translate(200px, 175px) 
+				rotate(0.85turn) 
+				scale(1.4);
+			transition: ease-in-out .5s;
+		}
+		&_2{
+			transform: 
+				translate(115px, 215px) 
+				rotate(0.97turn)
+				scale(0.6);
+			transition: ease-in-out .5s;
+		}
+	
+	}
+}
+
+//ANIMATION - 3
+.animation-3{
+	& .abstraction {
+	
+		&__logo{
+			transform: 
+				translate(0px, 20px) 
+				rotate(15deg);
+			transition: ease-in-out .5s;
+		}
+	}
+	& .line {
+		&_1 {
+			transform: 
+				translate(316px, 150px)
+				rotate(135deg);
+			transition: ease-in-out .6s;
+		}
+		&_2 {
+			transform: 
+				translate(130px, -335px)
+				rotate(0deg);
+			transition: ease-in-out .5s;
+		}
+		&_3 {
+			transform: translate(50px, 60px) rotate(45deg) scale(.5);
+			transition: ease-in-out .5s;
+		}
+	}
+	& .circle {
+		&_1 {
+			transform: 
+				translate(10px, 20px)
+				scale(1.1);
+			transition: ease-in-out .5s;
+
+		}
+		&_2{
+			transform: translate(170px, -285px) rotate(25deg);
+			transition: ease-in-out .5s;
+		}
+		&_3{
+			transform:  translate(246px, -15px) scale(0.15);
+			transition: ease-in-out .5s;
+		}
+	}
+	& .rect{
+		&_1{
+			transform: translate(226px, 145px) rotate(0.2turn) scale(0.7);
+			transition: ease-in-out .5s;
+		}
+		&_2{
+			transform: translate(-66px, -85px) rotate(0.1turn) scale(0.3);
+			transition: ease-in-out .5s;
+		}
+	}
+	
+	& .trigon{
+		&_1{
+			transform: translate(176px, 25px) rotate(0.15turn) scale(1.4);
+			transition: ease-in-out .4s;
+		}
+		&_2{
+			transform: translate(95px, 215px) rotate(0.29turn) scale(0.5);
+			transition: ease-in-out .5s;
+		}
+	
+	}
+}
+
 
 
 // ===== HEADER =====
