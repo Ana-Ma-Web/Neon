@@ -109,6 +109,10 @@ h1, h2, h3, h4, h5, h6 {
   --z-bg: -1;
 }
 
+section {
+  padding-top: 2rem;
+}
+
 input {
   background-color: transparent;
   color: var(--light-color);
@@ -375,9 +379,9 @@ img {
 }
 
 .animation-2 .line_1 {
-  -webkit-transform: translate(-35px, 0px) rotate(45deg);
-      -ms-transform: translate(-35px, 0px) rotate(45deg);
-          transform: translate(-35px, 0px) rotate(45deg);
+  -webkit-transform: translate(5px, -50px) rotate(45deg) scale(0.4);
+      -ms-transform: translate(5px, -50px) rotate(45deg) scale(0.4);
+          transform: translate(5px, -50px) rotate(45deg) scale(0.4);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
@@ -393,9 +397,9 @@ img {
 }
 
 .animation-2 .line_3 {
-  -webkit-transform: translate(-45px, 90px) rotate(45deg);
-      -ms-transform: translate(-45px, 90px) rotate(45deg);
-          transform: translate(-45px, 90px) rotate(45deg);
+  -webkit-transform: translate(15px, 20px) rotate(45deg) scale(0.6);
+      -ms-transform: translate(15px, 20px) rotate(45deg) scale(0.6);
+          transform: translate(15px, 20px) rotate(45deg) scale(0.6);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
@@ -411,9 +415,9 @@ img {
 }
 
 .animation-2 .circle_2 {
-  -webkit-transform: translate(156px, 240px) scale(0.2);
-      -ms-transform: translate(156px, 240px) scale(0.2);
-          transform: translate(156px, 240px) scale(0.2);
+  -webkit-transform: translate(186px, -20px) scale(0.4);
+      -ms-transform: translate(186px, -20px) scale(0.4);
+          transform: translate(186px, -20px) scale(0.4);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
@@ -474,18 +478,15 @@ img {
 }
 
 .animation-3 .line_1 {
-  -webkit-transform: translate(316px, 150px) rotate(135deg);
-      -ms-transform: translate(316px, 150px) rotate(135deg);
-          transform: translate(316px, 150px) rotate(135deg);
-  -webkit-transition: ease-in-out .6s;
-  -o-transition: ease-in-out .6s;
-  transition: ease-in-out .6s;
+  -webkit-transform: translate(236px, 80px) rotate(135deg) scale(0.4);
+      -ms-transform: translate(236px, 80px) rotate(135deg) scale(0.4);
+          transform: translate(236px, 80px) rotate(135deg) scale(0.4);
 }
 
 .animation-3 .line_2 {
-  -webkit-transform: translate(130px, -335px) rotate(0deg);
-      -ms-transform: translate(130px, -335px) rotate(0deg);
-          transform: translate(130px, -335px) rotate(0deg);
+  -webkit-transform: translate(130px, -185px) rotate(10deg) scale(0.5);
+      -ms-transform: translate(130px, -185px) rotate(10deg) scale(0.5);
+          transform: translate(130px, -185px) rotate(10deg) scale(0.5);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
@@ -510,9 +511,9 @@ img {
 }
 
 .animation-3 .circle_2 {
-  -webkit-transform: translate(170px, -285px) rotate(25deg);
-      -ms-transform: translate(170px, -285px) rotate(25deg);
-          transform: translate(170px, -285px) rotate(25deg);
+  -webkit-transform: translate(170px, 285px) rotate(25deg) scale(0.4);
+      -ms-transform: translate(170px, 285px) rotate(25deg) scale(0.4);
+          transform: translate(170px, 285px) rotate(25deg) scale(0.4);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
@@ -528,9 +529,9 @@ img {
 }
 
 .animation-3 .rect_1 {
-  -webkit-transform: translate(226px, 145px) rotate(0.2turn) scale(0.7);
-      -ms-transform: translate(226px, 145px) rotate(0.2turn) scale(0.7);
-          transform: translate(226px, 145px) rotate(0.2turn) scale(0.7);
+  -webkit-transform: translate(-96px, 115px) rotate(0.1turn) scale(0.7);
+      -ms-transform: translate(-96px, 115px) rotate(0.1turn) scale(0.7);
+          transform: translate(-96px, 115px) rotate(0.1turn) scale(0.7);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
@@ -771,11 +772,13 @@ img {
 
 .home {
   height: 100vh;
+  height: -webkit-calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .home__button {
   position: absolute;
-  bottom: 13%;
+  bottom: 3%;
   left: 7%;
 }
 

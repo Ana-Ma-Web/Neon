@@ -83,3 +83,11 @@ document.querySelectorAll('.accordion__control').forEach((item) =>
 		item.parentNode.classList.toggle('is-open');
 	})
 )
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
