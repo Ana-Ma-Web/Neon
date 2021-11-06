@@ -261,10 +261,7 @@ img{
 
 		}
 		&_2 {
-			transform:
-				translate(175px, -175px)
-				rotate(45deg)
-				scale(.7);
+			transform: translate(155px, -155px) rotate(45deg) scale(0.7);
 			transition: ease-in-out .5s;
 
 		}
@@ -539,7 +536,7 @@ img{
 .home{
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
-	
+
 	&__button{
 		position: absolute;
 		bottom: 3%;

@@ -388,9 +388,9 @@ img {
 }
 
 .animation-2 .line_2 {
-  -webkit-transform: translate(175px, -175px) rotate(45deg) scale(0.7);
-      -ms-transform: translate(175px, -175px) rotate(45deg) scale(0.7);
-          transform: translate(175px, -175px) rotate(45deg) scale(0.7);
+  -webkit-transform: translate(155px, -155px) rotate(45deg) scale(0.7);
+      -ms-transform: translate(155px, -155px) rotate(45deg) scale(0.7);
+          transform: translate(155px, -155px) rotate(45deg) scale(0.7);
   -webkit-transition: ease-in-out .5s;
   -o-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
