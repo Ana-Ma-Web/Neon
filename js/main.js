@@ -91,3 +91,11 @@ window.addEventListener('resize', () => {
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+function scrollUp() {
+   const scrollUp = document.getElementById ('scroll-up')
+   if (this.scrollY >= 300) scrollUp.classList.add ('show-scroll'); 
+   else scrollUp.classList.remove ('show-scroll')
+};
+
+window.addEventListener('scroll', scrollUp)
