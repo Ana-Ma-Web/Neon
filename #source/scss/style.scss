@@ -128,9 +128,6 @@ img{
 	&__svg {
 		position: absolute;
 	}
-	&__path {
-	}
-
 	&__logo{
 		font-size: 58px;
 		position: absolute;
@@ -143,7 +140,6 @@ img{
 		cursor: pointer;
 		user-select: none;
 		transition: ease-in-out .5s;
-
 	}
 }
 .line {
@@ -382,8 +378,6 @@ img{
 	}
 }
 
-
-
 // ===== HEADER =====
 
 .header {
@@ -595,9 +589,6 @@ img{
 
 .about {
 
-	&__h2 {
-	}
-
 	&__images{
 		display: flex;
 		justify-content: space-around;
@@ -700,9 +691,6 @@ img{
 
 .faq {
 
-	&__h2 {
-	}
-
 	&__block {
 		padding: 1rem 1rem;
 		margin: 2rem;
@@ -718,10 +706,6 @@ img{
 		border-radius: var(--border-radius);
 		&:focus-visible{
 			outline: 1px solid var(--first-color-alt);
-		}
-		
-		&__text{
-
 		}
 	}
 	&__arrow{
@@ -782,13 +766,6 @@ img{
 }
 
 .form {
-
-	&__wrapper{
-
-	}
-
-	&__list {
-	}
 
 	&__input {
 		padding: 1rem;
@@ -852,12 +829,6 @@ img{
 	}
 }
 
-.contact {
-
-	&__h2 {
-	}
-}
-
 .scrollup {
    color: var(--first-color);
    display: block;
@@ -875,8 +846,6 @@ img{
 .show-scroll{
    bottom: 5%;
 }
-
-
 
 
 @media (min-width: 576px) {
